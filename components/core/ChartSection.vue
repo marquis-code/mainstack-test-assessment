@@ -16,18 +16,25 @@
 </template>
 
 <script setup lang="ts">
-import { useWallet } from "@/composables/useWallet";
 import { useTransaction } from '@/composables/useTransaction';
 const { getTransactions, loading, filterTransactions, filteredTransactions, transactions } = useTransaction()
-const { getWallet, loading: loadingWallet, wallet } = useWallet();
 import ApexChart from 'vue3-apexcharts';
 
 onMounted(() => {
   getTransactions()
-  getWallet()
 })
 
-const totalAvailableBalance = Number(wallet.value.balance) + Number(wallet.value.ledger_balance)
+const data = ref({
+  "balance": 750.56,
+  "total_payout": 500,
+  "total_revenue": 1250.56,
+  "pending_payout": 0,
+  "ledger_balance": 500
+})
+
+// Calculate the total available balance
+// Assuming total available balance can be calculated by adding the balance and ledger balance
+const totalAvailableBalance = ref(data.value.balance + data.value.ledger_balance)
 
 const totalAmount = ref('')
 
