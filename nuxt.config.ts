@@ -3,7 +3,7 @@ export default {
   target: "static",
   app: {
     head: {
-      title: "National Profile Admin",
+      title: "MainStack Admin",
       htmlAttrs: { lang: "en" },
       meta: [
         { charset: "utf-8" },
@@ -17,10 +17,6 @@ export default {
   css: ["/assets/css/main.css"],
   tailwindcss: {
     cssPath: "@/assets/css/main.css",
-  },
-  axios: {
-    // Axios options here
-    timeout: 10000, // Example: set timeout to 10 seconds
   },
   // buildModules: [
   //   '@nuxtjs/moment'

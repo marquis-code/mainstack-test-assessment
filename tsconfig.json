@@ -9,6 +9,13 @@
       "@/*": [
         "./*"
       ]
-    }
-  }
+    },
+    "types": [
+      "@playwright/test"
+    ]
+  },
+  "include": [
+    "playwright.config.ts",
+    "tests/**/*.ts"
+  ]
 }

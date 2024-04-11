@@ -1,1 +1,1 @@
-National Profile Admin Dashboard
+Mainstack Admin Dashboard

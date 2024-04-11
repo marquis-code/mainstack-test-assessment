@@ -1,7 +1,5 @@
 <template>
-  <div>
+  <main>
     <NuxtPage />
-    <!-- <CoreConfirmationModal /> -->
-  </div>
+  </main>
 </template>
-

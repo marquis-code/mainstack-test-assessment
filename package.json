@@ -2,16 +2,22 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricardobalk/nuxt3-tailwindcss.git"
+    "url": "https://github.com/marquis-code/mainstack-admin"
   },
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "test": "playwright test",
+    "test:e2e": "start-server-and-test dev http://localhost:3000 test",
+    "test-user": "playwright test tests/user/get-user-information.spec.ts",
+    "test-wallet": "playwright test path/to/your/test-file.spec.ts",
+    "test-transactions": "playwright test path/to/your/test-file.spec.ts"
   },
   "devDependencies": {
+    "@playwright/test": "^1.43.0",
     "autoprefixer": "^10.4.15",
     "nuxt": "^v3.7.3",
     "postcss": "^8.4.38",
@@ -21,11 +27,19 @@
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@vueuse/core": "^10.9.0",
+    "apexcharts": "^3.48.0",
     "axios": "^1.6.8",
+    "chartjs-plugin-annotation": "^3.0.1",
     "moment": "^2.30.1",
     "pinia": "^2.1.7",
     "postcss-custom-properties": "^13.3.6",
+    "sweetalert2": "^11.7.32",
     "uuid": "^9.0.1",
-    "vue3-toastify": "^0.2.1"
+    "vue-chart-3": "^3.1.8",
+    "vue-chartjs": "^5.3.1",
+    "vue3-apexcharts": "^1.5.2",
+    "vue3-datepicker": "^0.4.0",
+    "vue3-toastify": "^0.2.1",
+    "vuejs3-datepicker": "^1.1.2"
   }
 }
